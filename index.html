@@ -63,27 +63,32 @@
     </div>
     <div class="transaction update-appointment">
         <h2> Update Appointment </h2>
-        <table>
-            <tr>
-                <td> Appointment ID </td>
-                <td> <input type="text" id="appt-id" name="appt-id"> </td>
-            </tr>            
-            <tr>
-                <td> <input type="submit" value="Submit"> </td>
-            </tr>
-        </table>
+        <form  id="update-form">
+            <table>
+                <tr>
+                    <td> Appointment ID </td>
+                    <td> <input type="text" id="appt-id-update" name="appt-id-update"> </td>
+                </tr>            
+                <tr>
+                    <td> <input type="submit" value="Submit"> </td>
+                    <td class="hidden" id="update-appt-success-msg"> Appointment updated! </td>
+                </tr>
+            </table>
+        </form>
     </div>
-    <div class=" transaction display-appointment">
-        <h2> Display/Search Appointment </h2>
-        <table>
-            <tr>
-                <td> Appointment ID </td>
-                <td> <input type="text" id="appt-id" name="appt-id"> </td>
-            </tr>
-            <tr>
-                <td> <input type="submit" value="Submit"> </td>
-            </tr>
-        </table>
+    <div class=" transaction search-appointment">
+        <h2> Search Appointment </h2>
+        <form  id="search-form">
+            <table>
+                <tr>
+                    <td> Appointment ID </td>
+                    <td> <input type="text" id="appt-id-search" name="appt-id-search"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Submit"> </td>
+                </tr>
+            </table>
+        </form>
     </div>
 </div>
 </body>

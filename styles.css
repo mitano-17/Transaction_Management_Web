@@ -21,6 +21,6 @@ td {
     width: 55%;
 }
 
-#create-appt-success-msg {
+.hidden {
     display: none;
 }

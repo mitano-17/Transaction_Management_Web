@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById("create-form");
+
+    /*
+        Create
+    */
+    var createForm = document.getElementById("create-form");
     var createApptSuccessMsg = document.getElementById("create-appt-success-msg");
 
-    form.addEventListener("submit", function(event) {
+    createForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
         // Collect form data
@@ -29,10 +33,44 @@ document.addEventListener("DOMContentLoaded", function() {
             isVirtual: isVirtual
         };
 
-        // TODO: Perform further processing here (e.g., send data to server)
+        // Insert
         
         console.log(formData);
         createApptSuccessMsg.style.display = "block";
-        form.reset();
+        createForm.reset();
+    });
+
+    /*
+        Update
+    */
+    var updateForm = document.getElementById("update-form");
+    var updateApptSuccessMsg = document.getElementById("update-appt-success-msg");
+    updateForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect form data
+        var appt_id = document.getElementById("appt-id-update").value;
+
+        // Update
+        
+        console.log("Update");
+        updateApptSuccessMsg.style.display = "block";
+        updateForm.reset();
+    });
+
+    /*
+        Search
+    */
+    var searchForm = document.getElementById("search-form");
+    searchForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect form data
+        var appt_id = document.getElementById("appt-id-search").value;
+
+        // Search
+        
+        console.log("Search");
+        searchForm.reset();
     });
 });
