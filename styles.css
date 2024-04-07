@@ -20,3 +20,7 @@ tr {
 td {
     width: 55%;
 }
+
+#create-appt-success-msg {
+    display: none;
+}

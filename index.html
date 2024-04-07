@@ -3,59 +3,63 @@
 <head>
     <title> STADVDB MCO2 </title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
 </head>
 <body>
 <div class="container">
     <h1>  Transaction Management Web Application </h1>
     <div class="transaction add-appointment">
         <h2> Create Appointment </h2>
-        <table>
-            <tr>
-                <td> Patient ID </td>
-                <td> <input type="text" id="patient" name="patient"> </td>
-            </tr>
-            <tr>
-                <td> Clinic ID </td>
-                <td> <input type="text" id="clinic" name="clinic"> </td>
-            </tr>
-            <tr>
-                <td> Doctor ID </td>
-                <td> <input type="text" id="doctor" name="doctor"> </td>
-            </tr>
-            <tr>
-                <td> Queued Date </td>
-                <td> <input type="date" id="appt-date" name="appt-date"> </td>
-            </tr>
-            <tr>
-                <td> Start Time </td>
-                <td> <input type="time" id="start-time" name="start-time"> </td>
-            </tr>
-            <tr>
-                <td> End Time </td>
-                <td> <input type="time" id="end-time" name="end-time"> </td>
-            </tr>
-            <tr>
-                <td> Appointment Type </td>
-                <td>
-                    <select id="appt-type" name="appt-type">
-                        <option value="consultation" selected> Consultation </option>
-                        <option value="inpatient"> Inpatient </option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td> Virtual </td>
-                <td>
-                    <select id="appt-type" name="appt-type">
-                        <option value="yes"> Yes </option>
-                        <option value="no" selected> No </option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td> <input type="submit" value="Submit"> </td>
-            </tr>
-        </table>
+        <form id="create-form">
+            <table>
+                <tr>
+                    <td> Patient ID </td>
+                    <td> <input type="text" id="patient" name="patient"> </td>
+                </tr>
+                <tr>
+                    <td> Clinic ID </td>
+                    <td> <input type="text" id="clinic" name="clinic"> </td>
+                </tr>
+                <tr>
+                    <td> Doctor ID </td>
+                    <td> <input type="text" id="doctor" name="doctor"> </td>
+                </tr>
+                <tr>
+                    <td> Queued Date </td>
+                    <td> <input type="date" id="appt-date" name="appt-date"> </td>
+                </tr>
+                <tr>
+                    <td> Start Time </td>
+                    <td> <input type="time" id="start-time" name="start-time"> </td>
+                </tr>
+                <tr>
+                    <td> End Time </td>
+                    <td> <input type="time" id="end-time" name="end-time"> </td>
+                </tr>
+                <tr>
+                    <td> Appointment Type </td>
+                    <td>
+                        <select id="appt-type" name="appt-type">
+                            <option value="consultation" selected> Consultation </option>
+                            <option value="inpatient"> Inpatient </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Virtual </td>
+                    <td>
+                        <select id="virtual" name="virtual">
+                            <option value="yes"> Yes </option>
+                            <option value="no" selected> No </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Submit"> </td>
+                    <td class="hidden" id="create-appt-success-msg"> Appointment created! </td>
+                </tr>
+            </table>
+        </form>
     </div>
     <div class="transaction update-appointment">
         <h2> Update Appointment </h2>
