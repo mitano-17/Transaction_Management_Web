@@ -1,0 +1,26 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    margin: 20px;
+    padding-bottom: 50px;
+}
+
+.transaction {
+    border: 1px solid black;
+    margin: 25px 0px;
+    padding: 10px 25px;
+}
+
+tr {
+    height: 35px;
+}
+
+td {
+    width: 55%;
+}
+
+.hidden {
+    display: none;
+}
