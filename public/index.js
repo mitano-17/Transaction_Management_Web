@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     /*
-        Create
+        Insert
     */
-    var createForm = document.getElementById("create-form");
-    var createApptSuccessMsg = document.getElementById("create-appt-success-msg");
+    var insertForm = document.getElementById("insert-form");
+    var insertApptSuccessMsg = document.getElementById("insert-appt-success-msg");
 
-    createForm.addEventListener("submit", function(event) {
+    insertForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
 
         // Collect form data
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Insert
         
         console.log(formData);
-        createApptSuccessMsg.style.display = "block";
-        createForm.reset();
+        insertApptSuccessMsg.style.display = "block";
+        insertForm.reset();
     });
 
     /*
