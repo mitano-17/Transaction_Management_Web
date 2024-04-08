@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Insert
     */
     var insertForm = document.getElementById("insert-form");
-    var insertAppointmentSuccessMsg = document.getElementById("insert-appoiontment-success-msg");
+    var insertAppointmentSuccessMsg = document.getElementById("insert-appointment-success-msg");
 
     insertForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
