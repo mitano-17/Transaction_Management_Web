@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Insert
     */
     var insertForm = document.getElementById("insert-form");
-    var insertApptSuccessMsg = document.getElementById("insert-appt-success-msg");
+    var insertAppointmentSuccessMsg = document.getElementById("insert-appoiontment-success-msg");
 
     insertForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         var patientId = document.getElementById("patient").value;
         var clinicId = document.getElementById("clinic").value;
         var doctorId = document.getElementById("doctor").value;
-        var queuedDate = document.getElementById("appt-date").value;
+        var queuedDate = document.getElementById("queued-date").value;
         var startTime = document.getElementById("start-time").value;
         var endTime = document.getElementById("end-time").value;
-        var appointmentType = document.getElementById("appt-type").value;
+        var appointmentType = document.getElementById("appointment-type").value;
         var isVirtual = document.getElementById("virtual").value;
 
         // Perform any necessary validation here
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Insert
         
         console.log(formData);
-        insertApptSuccessMsg.style.display = "block";
+        insertAppointmentSuccessMsg.style.display = "block";
         insertForm.reset();
     });
 
@@ -44,17 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
         Update
     */
     var updateForm = document.getElementById("update-form");
-    var updateApptSuccessMsg = document.getElementById("update-appt-success-msg");
+    var updateAppointmentSuccessMsg = document.getElementById("update-appointment-success-msg");
     updateForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
-
-        // Collect form data
-        var appt_id = document.getElementById("appt-id-update").value;
 
         // Update
         
         console.log("Update");
-        updateApptSuccessMsg.style.display = "block";
+        updateAppointmentSuccessMsg.style.display = "block";
         updateForm.reset();
     });
 
@@ -64,9 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var searchForm = document.getElementById("search-form");
     searchForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the default form submission
-
-        // Collect form data
-        var appt_id = document.getElementById("appt-id-search").value;
 
         // Search
         
