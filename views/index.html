@@ -14,32 +14,32 @@
             <table>
                 <tr>
                     <td> Patient ID </td>
-                    <td> <input type="text" id="patient" name="patient"> </td>
+                    <td> <input type="text" id="patient-insert" name="patient-insert"> </td>
                 </tr>
                 <tr>
                     <td> Clinic ID </td>
-                    <td> <input type="text" id="clinic" name="clinic"> </td>
+                    <td> <input type="text" id="clinic-insert" name="clinic-insert"> </td>
                 </tr>
                 <tr>
                     <td> Doctor ID </td>
-                    <td> <input type="text" id="doctor" name="doctor"> </td>
+                    <td> <input type="text" id="doctor-insert" name="doctor-insert"> </td>
                 </tr>
                 <tr>
                     <td> Queued Date </td>
-                    <td> <input type="date" id="queued-date" name="queued-date"> </td>
+                    <td> <input type="date" id="queued-date-insert" name="queued-date-insert"> </td>
                 </tr>
                 <tr>
                     <td> Start Time </td>
-                    <td> <input type="time" id="start-time" name="start-time"> </td>
+                    <td> <input type="time" id="start-time-insert" name="start-time-insert"> </td>
                 </tr>
                 <tr>
                     <td> End Time </td>
-                    <td> <input type="time" id="end-time" name="end-time"> </td>
+                    <td> <input type="time" id="end-time-insert" name="end-time-insert"> </td>
                 </tr>
                 <tr>
                     <td> Appointment Type </td>
                     <td>
-                        <select id="appointment-type" name="appointment-type">
+                        <select id="appointment-type-insert" name="appointment-type-insert">
                             <option value="consultation" selected> Consultation </option>
                             <option value="inpatient"> Inpatient </option>
                         </select>
@@ -48,7 +48,7 @@
                 <tr>
                     <td> Virtual </td>
                     <td>
-                        <select id="virtual" name="virtual">
+                        <select id="virtual-insert" name="virtual-insert">
                             <option value="yes"> Yes </option>
                             <option value="no" selected> No </option>
                         </select>
@@ -68,7 +68,49 @@
                 <tr>
                     <td> Appointment ID </td>
                     <td> <input type="text" id="appointment-id-update" name="appointment-id-update"> </td>
-                </tr>            
+                </tr>
+                <tr>
+                    <td> Patient ID </td>
+                    <td> <input type="text" id="patient-update" name="patient-update"> </td>
+                </tr>
+                <tr>
+                    <td> Clinic ID </td>
+                    <td> <input type="text" id="clinic-update" name="clinic-update"> </td>
+                </tr>
+                <tr>
+                    <td> Doctor ID </td>
+                    <td> <input type="text" id="doctor-update" name="doctor-update"> </td>
+                </tr>
+                <tr>
+                    <td> Queued Date </td>
+                    <td> <input type="date" id="queued-date-update" name="queued-date-update"> </td>
+                </tr>
+                <tr>
+                    <td> Start Time </td>
+                    <td> <input type="time" id="start-time-update" name="start-time-update"> </td>
+                </tr>
+                <tr>
+                    <td> End Time </td>
+                    <td> <input type="time" id="end-time-update" name="end-time-update"> </td>
+                </tr>
+                <tr>
+                    <td> Appointment Type </td>
+                    <td>
+                        <select id="appointment-type-update" name="appointment-type-update">
+                            <option value="consultation" selected> Consultation </option>
+                            <option value="inpatient"> Inpatient </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Virtual </td>
+                    <td>
+                        <select id="virtual-update" name="virtual-update">
+                            <option value="yes"> Yes </option>
+                            <option value="no" selected> No </option>
+                        </select>
+                    </td>
+                </tr>
                 <tr>
                     <td> <input type="submit" value="Submit"> </td>
                     <td class="hidden" id="update-appointment-success-msg"> Appointment updated! </td>
@@ -76,7 +118,7 @@
             </table>
         </form>
     </div>
-    <div class=" transaction search-appointment">
+    <div class="transaction search-appointment">
         <h2> Search Appointment </h2>
         <form  id="search-form">
             <table>
