@@ -6,5 +6,5 @@ app.post("/insert", controller.postInsert);
 app.put("/update/:id", controller.postUpdate);
 app.post("/search", controller.postSelect);
 
-app.get('*', function(req, res) { res.render('error', {}); } );
+app.get("*", function(req, res) { res.render("error", {}); } );
 module.exports = app;
