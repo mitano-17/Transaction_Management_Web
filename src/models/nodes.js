@@ -57,4 +57,4 @@ const node_utils = {
     }
 }
 
-module.exports = node_utils;
+module.exports = { node_utils };
