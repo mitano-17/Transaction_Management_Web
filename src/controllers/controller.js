@@ -1,33 +1,26 @@
-const db = require("../models/db.js");
+// const db = require("../models/db.js");
 
 const controller = {
     
     getIndex: async function (req, res) {
+        
+        // let query = "SELECT * FROM appointments;";
+
+        // result = await db.selectQuery(query);
+
+        // var data = {
+            
+        // }
 
         
-        let query = "SELECT * FROM appointments;";
-
-        result = await db.select_query(query);
-
-        var data = {
-            
-        }
-
-        res.render('index', { data })
     },
     
     postInsert: async function (req, res) {
-        var patientId = req.body.patientId;
-        var clinicId = req.body.clinicId;
-        var doctorId = req.body.doctorId;
-        var queuedDate = req.body.queuedDate;
-        var startTime = req.body.startTime;
-        var endTime = req.body.endTime;
-        var appointmentType = req.body.appointmentType;
-        var isVirtual = req.body.isVirtual;
 
         try {
-            const result = await db.insert_query(patientId, clinicId, doctorId, queuedDate, startTime, endTime, appointmentType, isVirtual)
+            //const result = await db.insertQuery(patientId, clinicId, doctorId, queuedDate, startTime, endTime, appointmentType, isVirtual)
+
+            const { patientId, clinicId, doctorId, queuedDate, startTime, endTime, appointmentType, isVirtual } = req.body;
 
             if(result) {
                 var data = {
@@ -102,14 +95,14 @@ const controller = {
         }
 
         try {
-            var result = await db.update_query(appointmentId, patientId, clinicId, doctorId, queuedDate, startTime, endTime, appointmentType, isVirtual);
+            //var result = await db.updateQuery(appointmentId, patientId, clinicId, doctorId, queuedDate, startTime, endTime, appointmentType, isVirtual);
             
             var data = {
                 result: result,
                 status: true,
                 msg: "Update appointment success."
             };
-            // this means successful
+            
             res.send(data);
         } catch (err) {
             var data = {
@@ -121,6 +114,7 @@ const controller = {
     },
 
     postSelect: async function (req, res) {
-
+        const appointmentId = req.body.searchInput;
+        let query = `SELECT * FROM appointments WHERE apptid = ${appointmentId}`;
     }
 }
