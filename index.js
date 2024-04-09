@@ -5,11 +5,11 @@ const hbs = require('hbs');
 
 // Modules
 const connect = require('./src/models/db.js');
-const { node_utils } = require('./models/nodes.js');
-const replicator = require('./models/replicator.js');
-const sync = require(`./models/sync.js`);
+const { node_utils } = require('./src/models/nodes.js');
+const replicator = require('./src/models/replicator.js');
+const sync = require(`./src/models/sync.js`);
 
-const routes = require('./routes/routes.js');
+const routes = require('./src/routes/routes.js');
 
 const app = express();
 
@@ -21,9 +21,15 @@ app.set('views', './src/views');
 
 app.use('/', routes);
 
-const port = process.env.SERVER_PORT;
-const hostname = process.env.HOSTNAME;
+// const port = process.env.SERVER_PORT;
+// const hostname = process.env.HOSTNAME;
+const port = process.env.SERVER_PORT || 8080;
+const hostname = 'localhost';
 
-app.listen(port, hostname, function() {
+app.get('/', (req, res) => {
+    res.send('test');
+});
+
+app.listen(port, hostname, () => {
     console.log(`Server is running at http://${hostname}:${port}`);
 });
