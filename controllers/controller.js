@@ -1,7 +1,22 @@
 const db = require("../models/db.js");
 
 const controller = {
-    postInsert: async function(req, res) {
+    
+    getIndex: async function (req, res) {
+
+        
+        let query = "SELECT * FROM appointments;";
+
+        result = await db.select_query(query);
+
+        var data = {
+            
+        }
+
+        res.render('index', { data })
+    },
+    
+    postInsert: async function (req, res) {
         var patientId = req.body.patientId;
         var clinicId = req.body.clinicId;
         var doctorId = req.body.doctorId;
@@ -31,7 +46,7 @@ const controller = {
         } catch(err) {} 
     },
     
-    postUpdate: async function(req, res) {
+    postUpdate: async function (req, res) {
         const { appointmentId } = req.params;
         const {
             old_patientId, 
@@ -105,7 +120,7 @@ const controller = {
         }
     },
 
-    postSelect: async function(req, res) {
+    postSelect: async function (req, res) {
 
     }
 }
