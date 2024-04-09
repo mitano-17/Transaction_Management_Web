@@ -1,15 +1,15 @@
 const nodes = require('./nodes.js');
 
 const db_operations = {
-    select_query: async function() {
+    selectQuery: async function() {
 
     },
 
-    insert_query: async function() {
+    insertQuery: async function() {
 
     }, 
 
-    update_query: async function() {
+    updateQuery: async function() {
 
     }
 }
