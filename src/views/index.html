@@ -2,27 +2,82 @@
 <html>
 <head>
     <title> STADVDB MCO2 </title>
-    <link rel="stylesheet" href="../public/styles.css">
-    <script src="../public/index.js"></script>
+    <link rel="stylesheet" href="../../public/styles.css">
+    <script src="../../public/index.js"></script>    
 </head>
 <body>
 <div class="container">
     <h1>  Transaction Management Web Application </h1>
-    <div class="transaction insert-appointment">
+    <div class="section insert-appointment">
         <h2> Insert Appointment </h2>
         <form id="insert-form">
             <table>
-                <tr>
-                    <td> Patient ID </td>
-                    <td> <input type="text" id="patient-insert" name="patient-insert"> </td>
-                </tr>
                 <tr>
                     <td> Clinic ID </td>
                     <td> <input type="text" id="clinic-insert" name="clinic-insert"> </td>
                 </tr>
                 <tr>
-                    <td> Doctor ID </td>
-                    <td> <input type="text" id="doctor-insert" name="doctor-insert"> </td>
+                    <td> Hospital Name </td>
+                    <td> <input type="text" id="hospital-name-insert" name="hospital-name-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Is Hospital? </td>
+                    <td>
+                        <select id="hospital-insert" name="hospital-insert">
+                            <option value="yes"> Yes </option>
+                            <option value="no" selected> No </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> City </td>
+                    <td> <input type="text" id="city-insert" name="city-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Province </td>
+                    <td> <input type="text" id="province-insert" name="province-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Region </td>
+                    <td>
+                        <select id="region-name-insert" name="region-name" required>
+                            <option value="National Capital Region (NCR)" selected> National Capital Region (NCR) </option>
+                            <option value="Ilocos Region (I)"> Ilocos Region (I) </option>
+                            <option value="Caraga (XIII)"> Caraga (XIII) </option>
+                            <option value="Cagayan Valley (II)"> Cagayan Valley (II) </option>
+                            <option value="Central Visayas (VII)"> Central Visayas (VII) </option>
+                            <option value="CALABARZON (IV-A)"> CALABARZON (IV-A) </option>
+                            <option value="Western Visayas (VI)"> Western Visayas (VI) </option>
+                            <option value="Central Luzon (III)"> Central Luzon (III) </option>
+                            <option value="MIMAROPA (IV-B)"> MIMAROPA (IV-B) </option>
+                            <option value="Bicol Region (V)"> Bicol Region (V) </option>
+                            <option value="Davao Region (XI)"> Davao Region (XI) </option>
+                            <option value="SOCCSKSARGEN (Cotabato Region) (XII)"> SOCCSKSARGEN (Cotabato Region) (XII) </option>
+                            <option value="Northern Mindanao (X)"> Northern Mindanao (X) </option>
+                            <option value="Zamboanga Peninsula (IX)"> Zamboanga Peninsula (IX) </option>
+                            <option value="Eastern Visayas (VIII)"> Eastern Visayas (VIII) </option>
+                            <option value="Cordillera Administrative Region (CAR)"> Cordillera Administrative Region (CAR) </option>
+                            <option value="Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)"> Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) </option>
+                          </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Status </td>
+                    <td>
+                        <select id="status-insert" name="status-insert">
+                            <option value="Complete"> Inpatient </option>
+                            <option value="Serving"> Inpatient </option>
+                            <option value="Queued" selected> Queued </option>
+                            <option value="Cancel" selected> Cancel </option>
+                            <option value="Skip" selected> Skip </option>          
+                            <option value="NoShow" selected> No Show </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Time Queued </td>
+                    <td> <input type="time" id="time-queued-insert" name="time-queued-insert"> </td>
                 </tr>
                 <tr>
                     <td> Queued Date </td>
@@ -40,17 +95,17 @@
                     <td> Appointment Type </td>
                     <td>
                         <select id="appointment-type-insert" name="appointment-type-insert">
-                            <option value="consultation" selected> Consultation </option>
-                            <option value="inpatient"> Inpatient </option>
+                            <option value="Consultation" selected> Consultation </option>
+                            <option value="Inpatient"> Inpatient </option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td> Virtual </td>
+                    <td> Is Virtual? </td>
                     <td>
                         <select id="virtual-insert" name="virtual-insert">
-                            <option value="yes"> Yes </option>
-                            <option value="no" selected> No </option>
+                            <option value="Yes"> Yes </option>
+                            <option value="No" selected> No </option>
                         </select>
                     </td>
                 </tr>
@@ -61,53 +116,108 @@
             </table>
         </form>
     </div>
-    <div class="transaction update-appointment">
+    <div class="section update-appointment">
         <h2> Update Appointment </h2>
         <form  id="update-form">
             <table>
                 <tr>
                     <td> Appointment ID </td>
-                    <td> <input type="text" id="appointment-id-update" name="appointment-id-update"> </td>
-                </tr>
-                <tr>
-                    <td> Patient ID </td>
-                    <td> <input type="text" id="patient-update" name="patient-update"> </td>
+                    <td> <input type="text" id="appointment-id-insert" name="appointment-id-insert"> </td>
                 </tr>
                 <tr>
                     <td> Clinic ID </td>
-                    <td> <input type="text" id="clinic-update" name="clinic-update"> </td>
+                    <td> <input type="text" id="clinic-insert" name="clinic-insert"> </td>
                 </tr>
                 <tr>
-                    <td> Doctor ID </td>
-                    <td> <input type="text" id="doctor-update" name="doctor-update"> </td>
+                    <td> Hospital Name </td>
+                    <td> <input type="text" id="hospital-name-insert" name="hospital-name-insert"> </td>
                 </tr>
                 <tr>
-                    <td> Queued Date </td>
-                    <td> <input type="date" id="queued-date-update" name="queued-date-update"> </td>
-                </tr>
-                <tr>
-                    <td> Start Time </td>
-                    <td> <input type="time" id="start-time-update" name="start-time-update"> </td>
-                </tr>
-                <tr>
-                    <td> End Time </td>
-                    <td> <input type="time" id="end-time-update" name="end-time-update"> </td>
-                </tr>
-                <tr>
-                    <td> Appointment Type </td>
+                    <td> Is Hospital? </td>
                     <td>
-                        <select id="appointment-type-update" name="appointment-type-update">
-                            <option value="consultation" selected> Consultation </option>
-                            <option value="inpatient"> Inpatient </option>
+                        <select id="hospital-insert" name="hospital-insert">
+                            <option value="yes"> Yes </option>
+                            <option value="no" selected> No </option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td> Virtual </td>
+                    <td> City </td>
+                    <td> <input type="text" id="city-insert" name="city-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Province </td>
+                    <td> <input type="text" id="province-insert" name="province-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Region </td>
                     <td>
-                        <select id="virtual-update" name="virtual-update">
-                            <option value="yes"> Yes </option>
-                            <option value="no" selected> No </option>
+                        <select id="region-name-insert" name="region-name" required>
+                            <option value="National Capital Region (NCR)" selected> National Capital Region (NCR) </option>
+                            <option value="Ilocos Region (I)"> Ilocos Region (I) </option>
+                            <option value="Caraga (XIII)"> Caraga (XIII) </option>
+                            <option value="Cagayan Valley (II)"> Cagayan Valley (II) </option>
+                            <option value="Central Visayas (VII)"> Central Visayas (VII) </option>
+                            <option value="CALABARZON (IV-A)"> CALABARZON (IV-A) </option>
+                            <option value="Western Visayas (VI)"> Western Visayas (VI) </option>
+                            <option value="Central Luzon (III)"> Central Luzon (III) </option>
+                            <option value="MIMAROPA (IV-B)"> MIMAROPA (IV-B) </option>
+                            <option value="Bicol Region (V)"> Bicol Region (V) </option>
+                            <option value="Davao Region (XI)"> Davao Region (XI) </option>
+                            <option value="SOCCSKSARGEN (Cotabato Region) (XII)"> SOCCSKSARGEN (Cotabato Region) (XII) </option>
+                            <option value="Northern Mindanao (X)"> Northern Mindanao (X) </option>
+                            <option value="Zamboanga Peninsula (IX)"> Zamboanga Peninsula (IX) </option>
+                            <option value="Eastern Visayas (VIII)"> Eastern Visayas (VIII) </option>
+                            <option value="Cordillera Administrative Region (CAR)"> Cordillera Administrative Region (CAR) </option>
+                            <option value="Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)"> Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) </option>
+                          </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Status </td>
+                    <td>
+                        <select id="status-insert" name="status-insert">
+                            <option value="Complete"> Inpatient </option>
+                            <option value="Serving"> Inpatient </option>
+                            <option value="Queued" selected> Queued </option>
+                            <option value="Cancel" selected> Cancel </option>
+                            <option value="Skip" selected> Skip </option>          
+                            <option value="NoShow" selected> No Show </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Time Queued </td>
+                    <td> <input type="time" id="time-queued-insert" name="time-queued-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Queued Date </td>
+                    <td> <input type="date" id="queued-date-insert" name="queued-date-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Start Time </td>
+                    <td> <input type="time" id="start-time-insert" name="start-time-insert"> </td>
+                </tr>
+                <tr>
+                    <td> End Time </td>
+                    <td> <input type="time" id="end-time-insert" name="end-time-insert"> </td>
+                </tr>
+                <tr>
+                    <td> Appointment Type </td>
+                    <td>
+                        <select id="appointment-type-insert" name="appointment-type-insert">
+                            <option value="Consultation" selected> Consultation </option>
+                            <option value="Inpatient"> Inpatient </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Is Virtual? </td>
+                    <td>
+                        <select id="virtual-insert" name="virtual-insert">
+                            <option value="Yes"> Yes </option>
+                            <option value="No" selected> No </option>
                         </select>
                     </td>
                 </tr>
@@ -118,7 +228,7 @@
             </table>
         </form>
     </div>
-    <div class="transaction search-appointment">
+    <div class="section search-appointment">
         <h2> Search Appointment </h2>
         <form  id="search-form">
             <table>
