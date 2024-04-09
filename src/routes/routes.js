@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express.Router();
-const controller = require("../../controllers/controller.js");
+const controller = require("../controllers/controller.js");
 
 app.get('/', controller.getIndex);
 app.post('/insert', controller.postInsert);
