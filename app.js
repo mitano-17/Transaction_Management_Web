@@ -2,7 +2,6 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const connect = require('./src/models/db.js');
 const router = require('./src/routes/routes.js');
-const handlebars = require('handlebars');
 
 const app = express();
 
