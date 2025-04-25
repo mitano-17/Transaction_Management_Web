@@ -5,9 +5,14 @@ A web application where distributed database systems are developed and implement
 ● Three-node distributed database system consisting of: 
 > (a) **Node 0** (Luzon + Vizayas and Mindanao);</br>
 > (b) **Node 1** (Luzon); and</br>
-> (c) **Node 2** (Visayas + Mindanao);
+> (c) **Node 2** (Visayas + Mindanao).
 
 ● Simulating concurrency control and consistency, such as:
+> (a) **Testing simultaneous reading**;</br>
+> (b) **Testing dirty read**; and</br> 
+> (c) **Testing lost update**.
+
+● 
 
 ## Instructions
 npm install
