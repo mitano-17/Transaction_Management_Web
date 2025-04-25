@@ -1,5 +1,7 @@
 # Transaction_Management_Web
+A web application simulating a distributed database system that supports concurrent multi-user access.
 
+## Instructions
 npm install
 npm start
 
