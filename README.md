@@ -1,5 +1,13 @@
 # Transaction_Management_Web
-A web application simulating a distributed database system that supports concurrent multi-user access.
+A web application where distributed database systems are developed and implemented for managing concurrent multi-user access to the SeriousMD Appointments dataset.
+
+## Design and Implementation
+● Three-node distributed database system consisting of: 
+> (a) **Node 0** (Luzon + Vizayas and Mindanao);</br>
+> (b) **Node 1** (Luzon); and</br>
+> (c) **Node 2** (Visayas + Mindanao);
+
+● Simulating concurrency control and consistency, such as:
 
 ## Instructions
 npm install
