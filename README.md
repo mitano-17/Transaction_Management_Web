@@ -12,7 +12,9 @@ A web application where distributed database systems are developed and implement
 > (b) **Testing dirty read**; and</br> 
 > (c) **Testing lost update**.
 
-● 
+● Implement techniques for global failure and recovery:
+> (a) **Log-Based Recovery Strategy**; and</br> 
+> (b) **Shutting down server to simulate crash**.
 
 ## Instructions
 npm install
